@@ -1,0 +1,11 @@
+--Used to create a view to filter weather data to all zip codes in Trenton Falls, NY
+--This helps us address several limitations:
+--Not all stations in NY track temperature
+----so focusing on a location that does gives us more accurate data
+--The API the weather data is retrieved from has a limit of 1000 station hours per pull, 
+----focusing on a single station allows us to pull several years of data
+
+SELECT 
+year, month, sum(value) as Energy_Usage FROM `probable-hash-285404.Capstone824.static_energyconsumptionbyzip_NY` 
+where zip_code in (13304, 13438, 13469, 13502, 13352, 13354, 13435)
+group by year, month
