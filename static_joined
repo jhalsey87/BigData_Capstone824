@@ -1,0 +1,20 @@
+--Combines both static sources into a single view to tie temperature and energy consumption together
+
+-- get the month from the date field in satic_weather_trentonfalls_ny
+-- fix the error invalid datetime string '2016-01' as all dates are in this year-month format
+-- delete leading zeros from the result
+-- also select the year with the same method
+with t2 as(
+SELECT  *,
+    CAST(format_datetime('%m', CAST(CONCAT(static_weather_trentonfalls_ny.DATE, '-01') as DATETIME)) as BIGNUMERIC) as month,
+    CAST(format_datetime('%Y', CAST(CONCAT(static_weather_trentonfalls_ny.DATE, '-01') as DATETIME)) as BIGNUMERIC) as year
+  FROM
+    `probable-hash-285404.Capstone824.static_weather_trentonfalls_ny` AS static_weather_trentonfalls_ny)
+SELECT
+    t1.year, t1.month, station, name, Energy_Usage, tavg, tmax,tmin
+    #, t1.*,
+    #t2.*
+  FROM
+    `probable-hash-285404.Capstone824.energyconsumption_trentonfalls_ny` AS t1
+    INNER JOIN t2 ON t1.month = t2.month and t1.year=t2.year
+order by t1.year desc,t1.month desc
