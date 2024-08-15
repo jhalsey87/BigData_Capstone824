@@ -1,4 +1,7 @@
-# BigData_Capstone824
+#Executive Summary: 
+##Project Name: Capstone824
+##Course: MGMT 59000 AI Assisted Big Data in the Cloud
+##Purdue University Summer II 2024
 
 ## This a team capstone submission for Purude University MGMT 59000 AI Assisted Big Data in the Cloud
 ### The intention is to combine at least one (in this case 2) Archived (herein referred to as static) data sets with one live API to analyze energy consumption patterns.
