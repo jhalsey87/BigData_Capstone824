@@ -14,7 +14,7 @@
 ### The electrical grid in the United States does not have significant energy storage capacity, and there is a cost to transporting and storing fuel for consumption. This creates a cost burden for energy companies who either produce too little or too much energy in a given time window. 
 
 ## Our Solution:
-###To facilitate the building of a future optimization model, we've built an ETL pipeline and proof-of-concept prediction model for energy consumption requirements for Trenton Falls, NY. By Analyzing historical weather and energy consumption data, we attempt to use live weather data for zip codes in Trenton Falls, NY to estimate the likely energy needs in the current month. By using a mature prediction model to create an optimization model, energy producers could reduce both storage and transportation costs.
+### To facilitate the building of a future optimization model, we've built an ETL pipeline and proof-of-concept prediction model for energy consumption requirements for Trenton Falls, NY. By Analyzing historical weather and energy consumption data, we attempt to use live weather data for zip codes in Trenton Falls, NY to estimate the likely energy needs in the current month. By using a mature prediction model to create an optimization model, energy producers could reduce both storage and transportation costs.
 
 ## Key Findings:
 ### We find a strong, negative correlation (-0.82) between temperature and energy consumption, strongly suggesting that colder months require significantly more energy than cooler months. 
