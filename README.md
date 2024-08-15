@@ -23,8 +23,8 @@
 
 ## Sources
 ### Static Data:
-### https://statics.teams.cdn.office.net/evergreen-assets/safelinks/1/atp-safelinks.html](https://catalog.data.gov/dataset/utility-energy-registry-monthly-zip-code-energy-use-beginning-2016
-### https://www.climate.gov/maps-data/dataset/past-weather-zip-code-data-table
+### Historical Energy Data: https://statics.teams.cdn.office.net/evergreen-assets/safelinks/1/atp-safelinks.html](https://catalog.data.gov/dataset/utility-energy-registry-monthly-zip-code-energy-use-beginning-2016
+### Historical Weather Data: https://www.climate.gov/maps-data/dataset/past-weather-zip-code-data-table
 
 ### Live Data
 ### Weather API: [https://api.weatherapi.com/v1/current.json?key=7c8218f18550417496b43123242902&q={area}](https://api.weatherapi.com/v1/current.json?key=7c8218f18550417496b43123242902&q=13354)
