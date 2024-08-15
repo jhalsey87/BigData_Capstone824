@@ -6,7 +6,7 @@
 
 # Executive Summary: 
 
-##Requirements:
+## Requirements:
 ### The intention is to combine at least one (in this case 2) Archived (herein referred to as static) data sets with one live API to analyze energy consumption patterns.
 
 ## Business case:
