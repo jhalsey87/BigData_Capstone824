@@ -1,0 +1,105 @@
+
+-- show the correlation between temperature and energy consumption
+SELECT
+    t1.tavg,
+    t2.Energy_Usage
+  FROM
+    `probable-hash-285404.Capstone824.static_joined` AS t1
+    INNER JOIN `probable-hash-285404.Capstone824.energyconsumption_trentonfalls_ny` AS t2 ON t1.year = t2.year
+     AND t1.month = t2.month;
+
+
+
+
+-- return the exact collelation value of tavg vs energy_usage
+SELECT
+    corr(t.tavg, t.Energy_Usage)
+  FROM
+    `probable-hash-285404.Capstone824.static_joined` AS t;
+
+
+--get the latest temp from the streaming data
+    -- grouping by the region field, return the newest record
+with latestdata As(
+SELECT
+    streaming_data.*
+  FROM
+    `probable-hash-285404.Capstone824.streaming_data` AS streaming_data
+    INNER JOIN (
+      SELECT
+          region,
+          max(last_updated) AS last_updated
+        FROM
+          `probable-hash-285404.Capstone824.streaming_data`
+        GROUP BY region
+    ) AS latest_records ON streaming_data.region = latest_records.region
+     AND streaming_data.last_updated = latest_records.last_updated)
+     select avg(temp_f) as temperature from latestdata;
+
+
+
+
+
+
+-- 1. create a prediction using static_joined that predicts energy consumption by temperature
+-- 2. create a model
+CREATE OR REPLACE MODEL `probable-hash-285404.Capstone824.energy_consumption_prediction_model`
+OPTIONS(model_type='LINEAR_REG',
+ input_label_cols=['Energy_Usage']) AS
+SELECT
+    Energy_Usage,
+    tavg
+  FROM
+    `probable-hash-285404.Capstone824.static_joined`;
+
+
+--predict the energy consumption based on the current temperature:
+with latestdata As(
+SELECT
+    streaming_data.*
+  FROM
+    `probable-hash-285404.Capstone824.streaming_data` AS streaming_data
+    INNER JOIN (
+      SELECT
+          region,
+          max(last_updated) AS last_updated
+        FROM
+          `probable-hash-285404.Capstone824.streaming_data`
+        GROUP BY region
+    ) AS latest_records ON streaming_data.region = latest_records.region
+     AND streaming_data.last_updated = latest_records.last_updated)
+SELECT
+    predicted_energy_usage
+  FROM
+    ML.PREDICT(MODEL `probable-hash-285404.Capstone824.energy_consumption_prediction_model`,
+      (
+      
+            select avg(temp_f) as tavg from latestdata
+    ));
+
+
+--rebuild the model using an 80/20 split for training and testing
+
+-- Save the test data to a table 
+-- Update the query to use a 80/20 split of data for training and testing
+CREATE OR REPLACE MODEL `probable-hash-285404.Capstone824.energy_consumption_prediction_model`
+OPTIONS(model_type='LINEAR_REG',
+ input_label_cols=['Energy_Usage'],
+ data_split_method='RANDOM',
+ data_split_eval_fraction=0.2) AS
+SELECT
+    Energy_Usage,
+    tavg
+  FROM
+    `probable-hash-285404.Capstone824.static_joined`;
+
+-- Select the testing data from the model and save it to a table (rsquared, etc)
+CREATE TABLE `probable-hash-285404.Capstone824.testing_data` AS
+SELECT
+  *
+FROM
+  ML.EVALUATE(MODEL `probable-hash-285404.Capstone824.energy_consumption_prediction_model`);
+
+--Show us the summary of testing data of the model (rsquared, etc)
+  select * from `Capstone824.testing_data`
+
