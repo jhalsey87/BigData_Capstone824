@@ -1,8 +1,8 @@
 
-## Project Name: Capstone824
-## Course: MGMT 59000 AI Assisted Big Data in the Cloud
-## Purdue University Summer II 2024
-## Team Name: Ninja_1
+# Project Name: Capstone824
+### Course: MGMT 59000 AI Assisted Big Data in the Cloud
+### Purdue University Summer II 2024
+### Team Name: Ninja_1
 
 # Executive Summary: 
 
