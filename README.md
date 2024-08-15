@@ -7,7 +7,8 @@
 # Executive Summary: 
 
 ## Requirements:
-### The intention is to combine at least one (in this case 2) Archived (herein referred to as static) data sets with one live API to analyze energy consumption patterns.
+### The intention is to combine at least one (in this case 2) Archived (herein referred to as static) data sets with one live API to analyze energy consumption patterns. 
+### the project should utilize at least three Google Cloud Components
 
 ## Business case:
 ### The electrical grid in the United States does not have significant energy storage capacity, and there is a cost to transporting and storing fuel for consumption. This creates a cost burden for energy companies who either produce too little or too much energy in a given time window. 
