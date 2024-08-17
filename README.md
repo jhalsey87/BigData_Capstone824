@@ -17,7 +17,7 @@
 ### To facilitate the building of a future optimization model, we've built an ETL pipeline and proof-of-concept prediction model for energy consumption requirements for Trenton Falls, NY. By Analyzing historical weather and energy consumption data, we attempt to use live weather data for zip codes in Trenton Falls, NY to estimate the likely energy needs in the current month. By using a mature prediction model to create an optimization model, energy producers could reduce both storage and transportation costs.
 
 ## Key Findings:
-### We find a strong, negative correlation (-0.82) between temperature and energy consumption, strongly suggesting that colder months require significantly more energy than cooler months. 
+### We find a strong, negative correlation (-0.83) between temperature and energy consumption, strongly suggesting that colder months require significantly more energy than cooler months. 
 
 ## Strengths of our model: 
 ### While temperature is not the only factor in determining usage, many other prediction models, such as predictions based on cell phone usage, are not able to be adjusted by seasonal factors, affecting their reliability. We believe our model could be used to augment other models in the future, addressing the limitations of both models.
@@ -43,6 +43,7 @@
 ##Project Resources: 
 ###•	Github Repository Link: https://github.com/jhalsey87/BigData_Capstone824/tree/main 
 ###•	Lookerstudio Dashboard: https://lookerstudio.google.com/u/0/reporting/00b216a9-b9e3-4ba4-a8a1-739f389aefa4/page/KAd8D 
+###•	Presentation (youtube.com): https://www.youtube.com/watch?v=X1AMTUo97A0
 ##Methodologies 
 ###•	Data Integration: Combined historical weather and energy consumption data with real-time weather information via a live API. 
 ###•	Correlation Analysis: Assessed the relationship between temperature and energy consumption to identify actionable patterns. 
