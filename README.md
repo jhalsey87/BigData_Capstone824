@@ -29,25 +29,16 @@
 ## Reccomendations: 
 ### To improve prediction of consumption, local weather and energy consumption data should be tracked more closely and incorporated so that the model can be expanded to more locations. In places where the data is already available, the model should be used to augment existing models for maximum accuracy in prediction and optimization of production requirements. The final prediction model should be used to create an optimization model for utility companies to apply to production.
 
-## Sources
-### Static Data:
-### Historical Energy Data: https://statics.teams.cdn.office.net/evergreen-assets/safelinks/1/atp-safelinks.html](https://catalog.data.gov/dataset/utility-energy-registry-monthly-zip-code-energy-use-beginning-2016
-### Historical Weather Data: https://www.climate.gov/maps-data/dataset/past-weather-zip-code-data-table
 
-### Live Data
-### Weather API: [https://api.weatherapi.com/v1/current.json?key=7c8218f18550417496b43123242902&q={area}](https://api.weatherapi.com/v1/current.json?key=7c8218f18550417496b43123242902&q=13354)
-
-### Competing Models (Cell phone data)
-### https://epjdatascience.springeropen.com/articles/10.1140/epjds/s13688-016-0075-3#:~:text=An%20accurate%20prediction%20of%20energy,allowing%20an%20efficient%20energy%20storage.
-
-##Project Resources: 
+## Project Resources: 
 ###	Github Repository Link: https://github.com/jhalsey87/BigData_Capstone824/tree/main 
 ###	Lookerstudio Dashboard: https://lookerstudio.google.com/u/0/reporting/00b216a9-b9e3-4ba4-a8a1-739f389aefa4/page/KAd8D 
 ###	Presentation (youtube.com): https://www.youtube.com/watch?v=X1AMTUo97A0
+
 ##Methodologies 
-###•	Data Integration: Combined historical weather and energy consumption data with real-time weather information via a live API. 
-###•	Correlation Analysis: Assessed the relationship between temperature and energy consumption to identify actionable patterns. 
-###•	Predictive Modeling: Developed a proof-of-concept model to project energy consumption based on live weather inputs, serving as a foundation for enhancing future prediction accuracy. 
+###	Data Integration: Combined historical weather and energy consumption data with real-time weather information via a live API. 
+###	Correlation Analysis: Assessed the relationship between temperature and energy consumption to identify actionable patterns. 
+###	Predictive Modeling: Developed a proof-of-concept model to project energy consumption based on live weather inputs, serving as a foundation for enhancing future prediction accuracy. 
 
 ## GCP Components Used
 ### Big Query
@@ -57,3 +48,14 @@
 ### Cloud Functions
 ### Gemini
 
+
+## References Sources
+### Static Data:
+### Historical Energy Data: https://statics.teams.cdn.office.net/evergreen-assets/safelinks/1/atp-safelinks.html](https://catalog.data.gov/dataset/utility-energy-registry-monthly-zip-code-energy-use-beginning-2016
+### Historical Weather Data: https://www.climate.gov/maps-data/dataset/past-weather-zip-code-data-table
+###
+### Live Data
+### Weather API: [https://api.weatherapi.com/v1/current.json?key=7c8218f18550417496b43123242902&q={area}](https://api.weatherapi.com/v1/current.json?key=7c8218f18550417496b43123242902&q=13354)
+###
+### Competing Models (Cell phone data)
+### https://epjdatascience.springeropen.com/articles/10.1140/epjds/s13688-016-0075-3#:~:text=An%20accurate%20prediction%20of%20energy,allowing%20an%20efficient%20energy%20storage.
