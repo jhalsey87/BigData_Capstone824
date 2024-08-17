@@ -41,9 +41,9 @@
 ### https://epjdatascience.springeropen.com/articles/10.1140/epjds/s13688-016-0075-3#:~:text=An%20accurate%20prediction%20of%20energy,allowing%20an%20efficient%20energy%20storage.
 
 ##Project Resources: 
-###•	Github Repository Link: https://github.com/jhalsey87/BigData_Capstone824/tree/main 
-###•	Lookerstudio Dashboard: https://lookerstudio.google.com/u/0/reporting/00b216a9-b9e3-4ba4-a8a1-739f389aefa4/page/KAd8D 
-###•	Presentation (youtube.com): https://www.youtube.com/watch?v=X1AMTUo97A0
+###	Github Repository Link: https://github.com/jhalsey87/BigData_Capstone824/tree/main 
+###	Lookerstudio Dashboard: https://lookerstudio.google.com/u/0/reporting/00b216a9-b9e3-4ba4-a8a1-739f389aefa4/page/KAd8D 
+###	Presentation (youtube.com): https://www.youtube.com/watch?v=X1AMTUo97A0
 ##Methodologies 
 ###•	Data Integration: Combined historical weather and energy consumption data with real-time weather information via a live API. 
 ###•	Correlation Analysis: Assessed the relationship between temperature and energy consumption to identify actionable patterns. 
